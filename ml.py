@@ -20,6 +20,7 @@ class start:
         self.option=st.sidebar.selectbox('What to do',['','Visualize','Analyze','Machine Learning'])
         return self.option
 if __name__=='__main__':
+    st.title('Data World - helps you to deal with Data')
     obj=start()
     data=obj.fileupload()
     to_do=obj.opt()
