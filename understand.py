@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import plotly.express as plt
 class analyse_class:
     def analyse_fun(data):
         data=data
@@ -10,5 +11,8 @@ class analyse_class:
             st.write(data.isnull().sum())
         if col1.button('Correlation Values'):
             st.write(data.corr())
-            
+        if col2.button('Plots'):
+            opt=col1.selectbox('Choose column',options=data.columns)
+            col1.header('Distribution')
+            col1.write(plt.histogram(data[opt])
             
