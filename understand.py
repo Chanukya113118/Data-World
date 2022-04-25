@@ -11,8 +11,7 @@ class analyse_class:
             st.write(data.isnull().sum())
         if col1.button('Correlation Values'):
             st.write(data.corr())
-        if col2.button('Plots'):
+        if col2.button('Distribution'):
             opt=col1.selectbox('Choose column',options=data.columns)
-            col1.header('Distribution')
-            col1.write(plt.histogram(data[opt])
+            col1.write(plt.histogram(data[opt]))
             
