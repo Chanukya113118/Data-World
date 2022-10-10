@@ -11,3 +11,4 @@ class analyse_class:
             st.write(data.isnull().sum())
         if col1.button('Correlation Values'):
             st.write(data.corr())
+        st.button("Press")
